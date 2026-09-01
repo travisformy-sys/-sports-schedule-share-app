@@ -1,0 +1,31 @@
+name: HomeKeep Build Check
+
+on:
+  push:
+    branches: [homekeep-build]
+    paths:
+      - 'homekeep/**'
+      - '.github/workflows/homekeep-check.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: homekeep
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: homekeep/package-lock.json
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Type check
+        run: npx tsc --noEmit
+      - name: Production build
+        run: npm run build
