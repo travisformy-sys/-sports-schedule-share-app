@@ -2,10 +2,37 @@ import Link from 'next/link';
 
 export default function Home(){
   return <main className="shell">
-    <div className="top"><div className="brand">HomeKeep</div><Link className="btn ghost" href="/auth">Sign in</Link></div>
+    <header className="topbar">
+      <div className="brandWrap"><div className="brandMark">⌂</div><div className="brand">HomeKeep</div></div>
+      <Link className="btn btnGhost btnSmall" href="/auth">Sign in</Link>
+    </header>
+
     <section className="hero">
-      <div className="card"><h1 style={{fontSize:44,lineHeight:1.05}}>Never forget the little jobs that protect your home.</h1><p className="muted" style={{fontSize:18}}>Track filters, detectors, gutters, appliances, plumbing and recurring household maintenance in one simple schedule.</p><Link className="btn primary" href="/auth">Create free account</Link></div>
-      <div className="card"><div className="muted">HomeKeep Plus</div><div style={{fontSize:34,fontWeight:800,marginTop:8}}>$0.99</div><div className="muted">per month</div><p className="muted">Unlimited reminders, household sharing, history, receipts and smart recommendations.</p></div>
+      <div className="card heroMain">
+        <span className="eyebrow">✓ Home maintenance, simplified</span>
+        <h1 className="heroTitle">A healthier home, without the mental load.</h1>
+        <p className="heroCopy">HomeKeep remembers the filters, detectors, vents, gutters, appliances and seasonal jobs that are easy to forget — and turns them into one simple home care plan.</p>
+        <div className="heroActions"><Link className="btn btnPrimary" href="/auth">Start free</Link><Link className="btn btnGhost" href="/dashboard">See the dashboard</Link></div>
+        <div className="quickGrid" style={{marginTop:28}}>
+          <div className="quickItem"><div className="quickIcon">❄️</div><div><strong>HVAC</strong><div className="quickLabel">Filters & seasonal service</div></div></div>
+          <div className="quickItem"><div className="quickIcon">🛡️</div><div><strong>Safety</strong><div className="quickLabel">Smoke & CO detectors</div></div></div>
+          <div className="quickItem"><div className="quickIcon">💧</div><div><strong>Plumbing</strong><div className="quickLabel">Water heaters & leaks</div></div></div>
+          <div className="quickItem"><div className="quickIcon">🏡</div><div><strong>Exterior</strong><div className="quickLabel">Gutters, roof & seasonal care</div></div></div>
+        </div>
+      </div>
+
+      <aside className="card">
+        <span className="badge">HomeKeep Plus</span>
+        <div className="price" style={{marginTop:16}}>$0.99</div><div className="muted">per month</div>
+        <div className="plusList">
+          <div className="plusItem"><span className="plusCheck">✓</span><span>Unlimited maintenance reminders</span></div>
+          <div className="plusItem"><span className="plusCheck">✓</span><span>Household sharing</span></div>
+          <div className="plusItem"><span className="plusCheck">✓</span><span>Maintenance history & receipts</span></div>
+          <div className="plusItem"><span className="plusCheck">✓</span><span>Smart home-care recommendations</span></div>
+        </div>
+        <Link className="btn btnPrimary" style={{width:'100%',textAlign:'center'}} href="/auth">Create your home plan</Link>
+        <p className="fine" style={{marginBottom:0}}>Start free. Upgrade only when you want the extra tools.</p>
+      </aside>
     </section>
   </main>
 }
