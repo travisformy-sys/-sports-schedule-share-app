@@ -1,0 +1,806 @@
+.marketingPage {
+  min-height: 100vh;
+  overflow: hidden;
+  background: #f8fbf8;
+}
+
+.marketingContainer {
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.marketingNav {
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.navLink {
+  font-size: 14px;
+  font-weight: 800;
+  color: #44564b;
+}
+
+.marketingHero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(420px, .98fr);
+  gap: 64px;
+  align-items: center;
+  padding-top: 52px;
+  padding-bottom: 80px;
+}
+
+.heroPitch {
+  position: relative;
+  z-index: 2;
+}
+
+.marketingTitle {
+  max-width: 720px;
+  margin: 20px 0 24px;
+  font-size: clamp(54px, 6.5vw, 82px);
+  line-height: .96;
+  letter-spacing: -4.8px;
+}
+
+.marketingTitle span {
+  color: var(--green);
+}
+
+.marketingLead {
+  max-width: 660px;
+  margin: 0;
+  color: #596b61;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.marketingActions {
+  align-items: center;
+  margin-top: 30px;
+}
+
+.primaryCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 16px 22px;
+  font-size: 15px;
+}
+
+.primaryCta span {
+  font-size: 19px;
+}
+
+.textCta {
+  padding: 14px 6px;
+  color: var(--green-dark);
+  font-size: 14px;
+  font-weight: 850;
+}
+
+.reassurance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 22px;
+  color: #5d6e64;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.reassurance span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.reassurance b {
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--mint);
+  color: var(--green);
+  font-size: 10px;
+}
+
+.heroVisual {
+  position: relative;
+  height: 610px;
+  overflow: hidden;
+  border-radius: 34px;
+  background: #dfece3;
+  box-shadow: 0 30px 70px rgba(21, 68, 45, .18);
+}
+
+.heroHomeImage {
+  object-fit: cover;
+}
+
+.imageWash {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 38, 25, .05) 30%, rgba(11, 38, 25, .56) 100%);
+}
+
+.exampleBadge {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, .45);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .82);
+  color: var(--green-dark);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+}
+
+.planPreview {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, .7);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 20px 50px rgba(9, 35, 22, .24);
+  backdrop-filter: blur(18px);
+}
+
+.previewHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 2px 14px;
+}
+
+.previewHead > div {
+  display: grid;
+  gap: 4px;
+}
+
+.previewHead strong {
+  font-size: 18px;
+}
+
+.previewKicker {
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.healthPill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 9px;
+  border-radius: 999px;
+  background: var(--mint);
+  color: var(--green-dark);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.healthPill i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #35a86b;
+}
+
+.previewTask {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) 28px;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 2px;
+  border-top: 1px solid #e8eee9;
+}
+
+.previewTask > span:nth-child(2) {
+  display: grid;
+  gap: 3px;
+}
+
+.previewTask strong {
+  font-size: 13px;
+}
+
+.previewTask small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.previewIcon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #edf7fb;
+  color: #247d9d;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.previewIcon.safety {
+  background: #fff4df;
+  color: #a07022;
+}
+
+.previewIcon.exterior {
+  background: var(--mint);
+  color: var(--green-dark);
+}
+
+.taskCheck {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #cfdcd4;
+  border-radius: 50%;
+  color: #8ba397;
+  font-size: 11px;
+}
+
+.trustStrip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.trustStrip p {
+  margin: 0;
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.trustItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  color: #68796f;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.trustItems span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trustItems span::before {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #6fba91;
+  content: "";
+}
+
+.benefitSection {
+  padding-top: 120px;
+  padding-bottom: 128px;
+}
+
+.sectionIntro {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.sectionIntro h2,
+.howPromise h2,
+.valueCopy h2,
+.signupCard h2 {
+  margin: 18px 0 16px;
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.02;
+  letter-spacing: -2.8px;
+}
+
+.sectionIntro p {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.benefitGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.benefitCard {
+  min-height: 310px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0 14px 40px rgba(21, 68, 45, .055);
+}
+
+.benefitNumber {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: var(--mint);
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.benefitCard h3 {
+  margin: 68px 0 12px;
+  font-size: 24px;
+  letter-spacing: -.7px;
+}
+
+.benefitCard p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.howSection {
+  position: relative;
+  padding: 108px 0;
+  background: linear-gradient(145deg, #102d20, #1d6040);
+  color: #fff;
+}
+
+.howSection::before {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 12% 20%, rgba(110, 218, 158, .16), transparent 32%);
+  content: "";
+  pointer-events: none;
+}
+
+.howGrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  align-items: center;
+  gap: 90px;
+}
+
+.howPromise h2 {
+  max-width: 560px;
+}
+
+.howPromise > p {
+  max-width: 550px;
+  color: rgba(255, 255, 255, .72);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.planFits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 26px 0;
+}
+
+.planFits span {
+  padding: 8px 11px;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, .85);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.lightCta {
+  display: inline-flex;
+  margin-top: 8px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .16);
+  color: var(--green-dark);
+}
+
+.stepsList {
+  display: grid;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 18px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .14);
+}
+
+.step:first-child {
+  padding-top: 0;
+}
+
+.step:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.stepNumber {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 50%;
+  color: #a7e1be;
+  font-weight: 900;
+}
+
+.step h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  letter-spacing: -.5px;
+}
+
+.step p {
+  margin: 0;
+  color: rgba(255, 255, 255, .68);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.valueSection {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: 70px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.valueCopy > p {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.valueList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 20px;
+  margin-top: 30px;
+}
+
+.valueList span {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #43554a;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.valueList b {
+  width: 21px;
+  height: 21px;
+  display: grid;
+  flex: none;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--mint);
+  color: var(--green);
+  font-size: 11px;
+}
+
+.signupCard {
+  padding: 42px;
+  border: 1px solid #d6e9dc;
+  border-radius: 30px;
+  background: linear-gradient(145deg, #edf8f1, #fff);
+  box-shadow: 0 24px 60px rgba(21, 68, 45, .1);
+}
+
+.signupIcon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  background: var(--green-dark);
+  box-shadow: 0 12px 25px rgba(31, 122, 77, .22);
+  color: #fff;
+  font-size: 26px;
+}
+
+.signupLabel {
+  margin: 24px 0 0 !important;
+  color: var(--green) !important;
+  font-size: 10px !important;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.signupCard h2 {
+  font-size: 42px;
+  letter-spacing: -1.8px;
+}
+
+.signupCard > p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.signupCard .primaryCta {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.signupCard small {
+  display: block;
+  margin-top: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.marketingFooter {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  padding-top: 36px;
+  padding-bottom: 42px;
+  border-top: 1px solid var(--line);
+}
+
+.marketingFooter p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.marketingFooter > a {
+  justify-self: end;
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+@media (max-width: 960px) {
+  .marketingHero {
+    grid-template-columns: 1fr;
+    gap: 44px;
+    padding-top: 38px;
+  }
+
+  .heroPitch {
+    max-width: 760px;
+  }
+
+  .heroVisual {
+    height: 650px;
+  }
+
+  .benefitGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .benefitCard:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .howGrid,
+  .valueSection {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .howPromise,
+  .valueCopy {
+    max-width: 760px;
+  }
+
+  .signupCard {
+    max-width: 680px;
+  }
+
+  .trustStrip {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .marketingFooter {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .marketingFooter p {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .marketingContainer {
+    width: min(calc(100% - 32px), 1180px);
+  }
+
+  .marketingNav {
+    height: 76px;
+  }
+
+  .navLink {
+    display: none;
+  }
+
+  .marketingHero {
+    padding-top: 26px;
+    padding-bottom: 56px;
+  }
+
+  .marketingTitle {
+    margin-top: 16px;
+    font-size: 50px;
+    line-height: .98;
+    letter-spacing: -3px;
+  }
+
+  .marketingLead {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .marketingActions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .marketingActions .primaryCta {
+    width: 100%;
+  }
+
+  .textCta {
+    text-align: center;
+  }
+
+  .reassurance {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .heroVisual {
+    height: 520px;
+    border-radius: 26px;
+  }
+
+  .exampleBadge {
+    top: 16px;
+    left: 16px;
+  }
+
+  .planPreview {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .previewHead strong {
+    font-size: 16px;
+  }
+
+  .previewTask {
+    padding: 10px 0;
+  }
+
+  .trustStrip {
+    padding: 22px 0;
+  }
+
+  .trustItems {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+  }
+
+  .benefitSection {
+    padding-top: 84px;
+    padding-bottom: 86px;
+  }
+
+  .sectionIntro {
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  .sectionIntro h2,
+  .howPromise h2,
+  .valueCopy h2 {
+    font-size: 40px;
+    letter-spacing: -2px;
+  }
+
+  .benefitGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefitCard,
+  .benefitCard:last-child {
+    grid-column: auto;
+    min-height: 0;
+    padding: 24px;
+  }
+
+  .benefitCard h3 {
+    margin-top: 36px;
+  }
+
+  .howSection {
+    padding: 78px 0;
+  }
+
+  .howGrid {
+    gap: 54px;
+  }
+
+  .step {
+    grid-template-columns: 46px 1fr;
+    gap: 14px;
+  }
+
+  .stepNumber {
+    width: 42px;
+    height: 42px;
+  }
+
+  .valueSection {
+    gap: 42px;
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+
+  .valueList {
+    grid-template-columns: 1fr;
+  }
+
+  .signupCard {
+    padding: 28px 22px;
+  }
+
+  .signupCard h2 {
+    font-size: 36px;
+  }
+
+  .marketingFooter {
+    grid-template-columns: 1fr auto;
+  }
+
+  .marketingFooter .brandMark {
+    display: none;
+  }
+}
