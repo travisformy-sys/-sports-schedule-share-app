@@ -21,16 +21,16 @@ const benefits = [
 
 const steps = [
   ['1', 'Tell us about your home', 'Choose your home type, age, major systems and features—including pets.'],
-  ['2', 'Get your personal plan', 'HomeKeep turns your answers into a practical schedule built around your household.'],
-  ['3', 'Let HomeKeep remember', 'Get recurring reminders, check work off and always know what deserves attention next.']
+  ['2', 'Get your personal plan', 'UpkeepCue turns your answers into a practical schedule built around your household.'],
+  ['3', 'Let UpkeepCue remember', 'Get recurring reminders, check work off and always know what deserves attention next.']
 ];
 
 export default function Home() {
   return <main className="marketingPage">
     <header className="marketingNav marketingContainer">
-      <Link href="/" className="brandWrap" aria-label="HomeKeep home">
+      <Link href="/" className="brandWrap" aria-label="UpkeepCue home">
         <span className="brandMark" aria-hidden="true">⌂</span>
-        <span className="brand">HomeKeep</span>
+        <span className="brand">UpkeepCue</span>
       </Link>
       <div className="navActions">
         <a className="navLink" href="#how-it-works">How it works</a>
@@ -42,7 +42,7 @@ export default function Home() {
       <div className="heroPitch">
         <span className="eyebrow">PERSONALIZED HOME CARE IN ABOUT 2 MINUTES</span>
         <h1 className="marketingTitle">Your home has a lot to remember. <span>Now you don’t have to.</span></h1>
-        <p className="marketingLead">HomeKeep turns your home’s age, systems and features into one simple maintenance plan—so you know what to do, when to do it and what can wait.</p>
+        <p className="marketingLead">UpkeepCue turns your home’s age, systems and features into one simple maintenance plan—so you know what to do, when to do it and what can wait.</p>
         <div className="heroActions marketingActions">
           <Link className="btn btnPrimary primaryCta" href="/auth">Build my free home plan <span aria-hidden="true">→</span></Link>
           <a className="textCta" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a>
@@ -54,10 +54,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="heroVisual" aria-label="Example of a HomeKeep maintenance plan">
+      <div className="heroVisual" aria-label="Example of an UpkeepCue maintenance plan">
         <Image
           className="heroHomeImage"
-          src="/homekeep-hero.webp"
+          src="/upkeepcue-hero.webp"
           alt="A welcoming, well-maintained home in warm natural light"
           fill
           priority
@@ -92,7 +92,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="trustStrip marketingContainer" aria-label="HomeKeep benefits">
+    <section className="trustStrip marketingContainer" aria-label="UpkeepCue benefits">
       <p>One calm place for the work that keeps your home healthy</p>
       <div className="trustItems">
         <span>Personalized schedules</span>
@@ -106,7 +106,7 @@ export default function Home() {
       <div className="sectionIntro">
         <span className="eyebrow">YOUR HOME DESERVES A SYSTEM</span>
         <h2>Stop carrying your whole house around in your head.</h2>
-        <p>HomeKeep gives the easy-to-forget jobs a dependable home of their own.</p>
+        <p>UpkeepCue gives the easy-to-forget jobs a dependable home of their own.</p>
       </div>
       <div className="benefitGrid">
         {benefits.map(benefit => <article className="benefitCard" key={benefit.title}>
@@ -122,7 +122,7 @@ export default function Home() {
         <div className="howPromise">
           <span className="eyebrow light">FROM “I SHOULD” TO “IT’S HANDLED”</span>
           <h2>Your home’s maintenance manual, made for you.</h2>
-          <p>Every home is different. HomeKeep asks only what it needs to build a useful starting plan for yours.</p>
+          <p>Every home is different. UpkeepCue asks only what it needs to build a useful starting plan for yours.</p>
           <div className="planFits">
             <span>House</span><span>Townhome</span><span>Condo</span><span>Manufactured home</span>
           </div>
@@ -141,7 +141,7 @@ export default function Home() {
       <div className="valueCopy">
         <span className="eyebrow">START SIMPLE. GROW WHEN YOU’RE READY.</span>
         <h2>A better home-care habit starts free.</h2>
-        <p>Build your plan and see your schedule without entering a credit card. HomeKeep Plus is available for <strong>$0.99 per month</strong> when you want the extra tools.</p>
+        <p>Build your plan and see your schedule without entering a credit card. UpkeepCue Plus is available for <strong>$0.99 per month</strong> when you want the extra tools.</p>
         <div className="valueList">
           <span><b>✓</b> Unlimited maintenance reminders</span>
           <span><b>✓</b> Household sharing</span>
@@ -153,14 +153,14 @@ export default function Home() {
         <span className="signupIcon" aria-hidden="true">⌂</span>
         <p className="signupLabel">YOUR PERSONAL HOME PLAN</p>
         <h2>Ready to make home care feel lighter?</h2>
-        <p>Answer a few quick questions. HomeKeep will take it from there.</p>
+        <p>Answer a few quick questions. UpkeepCue will take it from there.</p>
         <Link className="btn btnPrimary primaryCta" href="/auth">Build my free plan →</Link>
         <small>No credit card required.</small>
       </div>
     </section>
 
     <footer className="marketingFooter marketingContainer">
-      <div className="brandWrap"><span className="brandMark" aria-hidden="true">⌂</span><span className="brand">HomeKeep</span></div>
+      <div className="brandWrap"><span className="brandMark" aria-hidden="true">⌂</span><span className="brand">UpkeepCue</span></div>
       <p>Less mental load. More confident home care.</p>
       <Link href="/auth">Sign in</Link>
     </footer>

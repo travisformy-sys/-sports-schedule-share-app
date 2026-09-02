@@ -1,4 +1,4 @@
-# HomeKeep
+# UpkeepCue
 
 Household maintenance reminder MVP built with Next.js and Supabase.
 
